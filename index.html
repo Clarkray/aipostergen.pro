@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Poster Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Generate beautiful posters with AI in seconds">
+    <link rel="canonical" href="https://aipostergen.pro">
+</head>
+<body>
+    <nav class="nav-bar">
+    </nav>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="images/logo.png" alt="AI Poster Generator Logo" class="logo">
+            </div>
+            <h1>AI Poster Generator</h1>
+            <p class="tagline">Create professional-grade designs with one click</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <form id="generator-form">
+                    <div class="form-group">
+                        <label for="topic">Poster Topic</label>
+                        <input type="text" id="topic" name="topic" placeholder="Your creative vision (e.g., Coffee Shop, Fashion Event)" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="style">Design Style</label>
+                        <input type="text" id="style" name="style" placeholder="e.g., Minimalist, Vintage, Tech" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="poster-ratio">Poster Ratio</label>
+                        <select id="poster-ratio" name="poster-ratio" required>
+                            <option value="vertical">Vertical (Mobile)</option>
+                            <option value="horizontal">Horizontal (Desktop)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additional-info">Additional Requirements (Optional)</label>
+                        <textarea id="additional-info" name="additional-info" placeholder="e.g., Specific elements, color scheme, layout preferences"></textarea>
+                    </div>
+                    
+                    <!-- 隐藏的高级设计参数 -->
+                    <input type="hidden" id="design-prompt" name="design-prompt" value="你是一位国际顶尖的数字杂志艺术总监和前端开发专家，曾为Vogue、Elle等时尚杂志设计过数字版面。请从以下设计风格中选择合适的：极简主义、大胆现代、优雅复古、平面设计、手绘、工业、未来主义、水彩、插画、艺术装饰、波普艺术、自然、科技、复古未来主义、黑暗、色彩丰富、单色、乡村、优雅、运动、抽象、赛博朋克、极端对比、胶卷、阴影与光线、装饰艺术、混合媒介、生态设计、动态风格。设计应包含：日期区域、标题和副标题、引用区块、核心要点列表。确保设计精致奢华，如同高端杂志。">
+                    
+                    <button type="submit" id="generate-btn">Generate Poster</button>
+                </form>
+            </div>
+            
+            <div class="loading-section" id="loading-section">
+                <div class="spinner"></div>
+                <p>Crafting your magazine-style poster...</p>
+                <p class="loading-quote">"Design is intelligence made visible"</p>
+            </div>
+
+            <div class="result-section" id="result-section">
+                <div class="preview-container">
+                    <iframe id="preview-iframe" title="Preview" sandbox="allow-same-origin allow-scripts"></iframe>
+                </div>
+            </div>
+            <button id="download-btn" class="download-button">Download Poster</button>
+        </main>
+
+        <footer>
+            <p>AI Poster Generator | <span class="footer-tagline">Editorial Excellence</span></p>
+        </footer>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
+<select name="" id=""></select>
